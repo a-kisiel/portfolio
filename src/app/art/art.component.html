@@ -1,0 +1,11 @@
+<div id="art-anchor" class="art-wrapper">
+    <h2>I draw things.</h2>
+    <div>
+        Sometimes I draw. Usually people, sometimes strangers or my family, most often myself.
+    </div>
+    <div class="gallery-wrap">
+        @for(img of gallery; track img.title) {
+            <div class="gallery-img" style="background-image: url({{ img.src }}); {{ img.styles }}"></div>
+        }
+    </div>
+</div>

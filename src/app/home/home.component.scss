@@ -1,0 +1,45 @@
+.home-wrapper {
+    width: 100vw;
+    height: 800px;
+
+    .color-blocks {
+        display: flex;
+        width: 100vw; height: 100%;
+        
+        .home-left {
+            background-color: black;
+            width: 60%; height: 100%;
+        }
+        .home-right {
+            position: relative;
+            background-color: var(--accent);
+            width: 40%; height: 100%;
+
+            .home-right-mask {
+                position: absolute;
+                bottom: 0; left: -245px;
+                width: 760px; height: 100%;
+                max-width: 760px;
+                background-image: url('/media/images/self2.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: 1;
+            }
+        }
+    }
+
+    .greeting {
+        display: flex;
+        color: white;
+        width: 100%; height: 100%;
+        margin-top: -800px;
+
+        .name-header {
+            width: 100%;
+            max-width: 1200px;
+            font-size: 100px; font-weight: 400;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<div id="music-anchor" class="music-wrapper">
+    <h2>I make music.</h2>
+    <div>
+        I've been playing piano for {{ pianoYears }} years and guitar for {{ guitarYears }}. Singing? I do that.
+        <br/><br/>
+        I also sometimes write my own songs.
+
+        <div class="music-container">
+            @for(track of tracks; track track.title) {
+                <div class="track-wrapper{{ track.active ? ' active' : '' }}">
+                    <div class="track-title"><span>{{ track.title }}</span></div>
+                    <audio id="{{ $index }}_player">
+                        <source [src]="track.src" [type]="track.type ?? 'audio/mpeg'">
+                        Your browser does not support the audio element...
+                    </audio>
+                    <div class="audio-controls">
+                        @if (!track.active){<div (click)="playerAction($index, 'play')"><span>&#9658;</span></div>}
+                        @else {<div (click)="playerAction($index, 'pause')" style="margin-top: -2px;"><span>&#9208;</span></div>}
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

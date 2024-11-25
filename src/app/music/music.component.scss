@@ -1,0 +1,51 @@
+.music-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+    .music-container {
+        margin-top: 25px;
+
+        .track-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            &.active,
+            &:hover {
+                background-color: #eee;
+                transition: all .4s;
+
+                .track-title {
+                    padding-left: 10px;
+                    transition: padding-left .4s
+                }
+            }
+
+            .track-title {
+                display: flex;
+                align-items: center;
+                width: auto; height: 45px;
+
+            }
+
+            .audio-controls {
+                display: flex;
+
+                >div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 45px; height: 45px;
+                    color: black;
+                    text-align: center;
+                    cursor: pointer;
+
+                    span {
+                        font-size: 16px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}

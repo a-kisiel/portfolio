@@ -1,10 +1,10 @@
-<div class="main-nav">
+<div class="main-nav {{ navClass }}">
     <div class="limited-nav">
+        <div><div class="nav-seal"></div></div>
         <div class="nav-options">
-            <div><a href="">Option 1</a></div>
-            <div><a href="">Option 2</a></div>
-            <div><a href="">Option 3</a></div>
+            @for(location of locations; track location.value) {
+                <div (click)="navigate($index)" [class]="location.active ? 'active' : ''">{{ location.title }}</div>
+            }
         </div>
-        <div>Alex Kisiel</div>
     </div>
 </div>

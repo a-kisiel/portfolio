@@ -1,8 +1,19 @@
 .main-nav {
+    position: sticky;
+    top: 0;
     width: 100%; height: 60px;
-    font-family: sans-serif;
-    color: white;
-    background-color: #224;
+    color: black;
+    background-color: #fff;
+    z-index: 10;
+
+    transition: color .25s, background-color .25s;
+
+    &.dark-nav {
+        color: white;
+        background-color: black;
+
+        .limited-nav .nav-options > div:before { background: white; }
+    }
 
     .limited-nav {
         display: flex;
@@ -10,20 +21,86 @@
         align-items: center;
         width: 100%; height: 100%;
         max-width: 1200px;
+        padding: 0 20px;
         margin: auto;
+
+        .nav-seal {
+            width: 50px; height: 50px;
+            background-image: url("/media/seal.png");
+            background-size: 100% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
         .nav-options {
             display: flex;
+            align-items: center;
+            height: 100%;
+            margin-right: 20px;
 
             >div {
-                a {
-                    color: white;
-                    text-decoration: none;
+                cursor: pointer;
+
+                &:not(:last-of-type) {
+                    margin-right: 20px;
                 }
 
-                &:not(:first-of-type) {
-                    margin-left: 18px;
-                }
+                // Expanding underlines
+                padding:0;border:0 none;position: relative; outline: none;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    bottom: -1px;
+                    left: 0;
+                    background: black;
+                    visibility: hidden;
+                    border-radius: 2px;
+                    transform: scaleX(0);
+                    transition: .15s linear;
+                  }
+
+                  &.active:before,
+                  &:hover:before,
+                  &:focus:before {
+                    visibility: visible;
+                    transform: scaleX(1);
+                  }
+                  @keyframes hover-v {
+                    0% {
+                        transform: scaleX(0);
+                        height: 5px;
+                       }
+                    45% {   
+                        transform: scaleX(1.05);
+                        height: 5px;
+                       }
+                    55% {height: 5px;}
+                    100% {
+                        transform: scaleX(1.05);
+                        height: 3.8rem;
+                       }
+                  }
+                  @keyframes no-hover-v {
+                    0% {
+                        transform: scaleX(1.05);
+                        height: 3.8rem;
+                       }
+                    45% {height: 5px;}
+                    55% {   
+                        transform: scaleX(1.05);
+                        height: 5px;
+                        opacity: 1;
+                       }
+                    
+                    100% {
+                        transform: scaleX(0);
+                        height: 5px;
+                        opacity: .02;
+                       }
+                  }
             }
         }
     }

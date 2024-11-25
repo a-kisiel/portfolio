@@ -1,0 +1,57 @@
+<div id="professional-anchor" class="professional-wrapper">
+    <h2>I write code.</h2>
+    <div class="prof-section summary">
+        For {{ years }} years I've been writing programs and scripts both professionally and recreationally. Learning new 
+        technologies and working on projects has been immensely rewarding, and has allowed me to be of help to 
+        my friends, family, and colleagues on many occasions.
+    </div>
+    <div class="prof-section tech-list-wrap">
+        <div style="margin: auto;">
+            In each of my professional and personal projects I've endeavored to learn something new; I've had a chance to 
+            work with lots of different technologies.
+            <br/><br/>
+            A more comprehensive list can be found <a href="">here</a>.
+        </div>
+        <div class="tech-list">
+            @for(tech of techs; track tech.title) {
+                <a
+                    [href]="tech.href"
+                    [title]="tech.title"
+                    style="background-image: url('{{ tech.icon }}'); {{ tech.style ?? '' }}"
+                >
+                </a>
+            }
+        </div>
+    </div>
+    <div class="prof-section sites-portfolio">
+        <div class="sites-intro">
+            I've designed, written, and maintained sites for my Dad and sister so they have a platform that suits 
+            their needs and aesthetic preferences.
+            <br/><br/>
+            The code for each these sites (and some other miscellaneous projects) is available on <a href="https://github.com/a-kisiel">my github</a>.
+        </div>
+        <div class="sites-wrap">
+            @for(site of sites; track site.href) {
+                <a
+                    class="site"
+                    [href]="site.href"
+                    style="background-image: url({{ site.bg }});"
+                >
+                    <div class="site-mask"></div>
+                    <span class="site-description">
+                        <span>{{ site.description }}</span>
+                        <div>
+                            <button>Visit site <span style="padding-left: 10px;">></span></button>
+                            <button><a [href]="site.github">Github repo <span style="padding-left: 10px;">></span></a></button>
+                        </div>
+                        
+                    </span>
+                </a>
+            }
+        </div>
+    </div>
+    <div>
+        I've also been working for <a href="https://www.sheetlabels.com">SheetLabels.com</a>, helping to maintain the site and add new
+        internal features (I can't post any of that code, so you'll just have to trust me).
+    </div>
+</div>
