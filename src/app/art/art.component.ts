@@ -10,12 +10,11 @@ import { Component } from '@angular/core';
 export class ArtComponent {
   gallery = [
     {
-      title: 'Me 1',
-      src: '/media/art/image0.jpeg',
-      styles: 'background-position: center -20px'
+      title: 'Me',
+      src: '/media/art/moi.jpeg'
     },
     {
-      title: 'Nessa',
+      title: 'Vanessa',
       src: '/media/art/image1.jpeg'
     },
     {
@@ -35,8 +34,16 @@ export class ArtComponent {
       src: '/media/art/flowergirl.jpeg'
     },
     {
-      title: 'Fisherman',
-      src: '/media/art/fishman.jpeg'
+      title: 'Vanessa Again Again',
+      src: '/media/art/v2.jpg',
+    },
+    {
+      title: 'Stoagie',
+      src: '/media/art/stoagie.jpg'
     }
+    // {
+    //   title: 'Fisherman',
+    //   src: '/media/art/fishman.jpeg'
+    // }
   ];
 }

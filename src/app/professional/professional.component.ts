@@ -91,9 +91,9 @@ export class ProfessionalComponent implements OnInit {
       'github': 'https://github.com/a-kisiel/portfolio',
       'bg': '',
       'bgOptions': {
-        'debugging': '/media/art/fishman.jpeg',
-        'uncompressed': '/media/art/fishman.jpeg',
-        'compressed': '/media/art/fishman.jpeg'
+        'debugging': '/media/art/v.jpg',
+        'uncompressed': '/media/art/v.jpg',
+        'compressed': '/media/art/v.jpg'
       }
     }
   ];

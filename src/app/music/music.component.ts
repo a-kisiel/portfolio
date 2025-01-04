@@ -28,11 +28,18 @@ export class MusicComponent {
       player: null,
       active: false
     },
+    // {
+    //   title: 'H A R K',
+    //   date: '2020',
+    //   src: '/media/music/HARK.m4a',
+    //   type: 'audio/x-m4a',
+    //   player: null,
+    //   active: false
+    // }
     {
-      title: 'H A R K',
-      date: '2020',
-      src: '/media/music/HARK.m4a',
-      type: 'audio/x-m4a',
+      title: 'Automatic',
+      date: '2024-25',
+      src: '/media/music/automatic5.mp3',
       player: null,
       active: false
     }
