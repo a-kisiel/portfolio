@@ -1,0 +1,9 @@
+{{ .Content }}
+{{- range where .Pages "Params.active" "eq" true}}
+    <h4>{{ .Title }}</h4>
+    <ul>
+    {{- range .RegularPages}}
+        {{ .Render "li" }}
+    {{- end}}
+    </ul>
+{{- end }}

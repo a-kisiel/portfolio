@@ -1,0 +1,10 @@
+# Learn how to use Date format (date, created, updated)
+# -> https://gohugo.io/functions/dateformat/
+
+[items]
+
+[items.title]
+other = "Items"
+
+[items.date]
+other = "Jan 2, 2006"

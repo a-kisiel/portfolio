@@ -1,0 +1,19 @@
+<div class="review-header">
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Params.subtype "album" }}
+        <span>{{ .Params.artist }}</span>
+    {{ else }}
+        <span>
+            {{ if eq .Params.subtype "musical" }}
+                {{ if and (.Params.composer) (.Params.lyricist) }}
+                    Music: {{ .Params.composer }}; Lyrics: {{ .Params.lyricist}}
+                {{ else if .Params.composer }}
+                    Music & Lyrics: {{ .Params.composer }}
+                {{ end }}
+            {{ else }}
+                Written by {{ .Params.writer }}
+            {{ end }}
+        </span><br/>
+        <span>{{ .Params.performanceDate }} | {{ .Params.venue }}</span>  
+    {{ end }}
+</div>

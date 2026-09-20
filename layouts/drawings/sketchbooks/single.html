@@ -1,0 +1,4 @@
+{{ define "main" }}
+<h3>{{ .Title }}</h3>
+{{ partial "image_gallery" (dict "context" . "gallery_dir" (printf "%s/%s" "/images/drawings" .Params.folder)) }}
+{{ end }}

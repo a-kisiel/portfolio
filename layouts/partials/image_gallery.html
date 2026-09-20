@@ -1,0 +1,29 @@
+<style>
+    .image-gallery {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        justify-items: center;
+        align-items: top;
+        list-style: none;
+    }
+
+    .image-gallery li {
+        width: auto;
+        height: auto;
+        margin-right: 1rem;
+    }
+</style>
+
+{{ $dir := string .gallery_dir }}
+<ul class="image-gallery">
+{{ range (readDir (print "/static" $dir)) }}
+  {{- $image := resources.Get (printf "%s/%s" $dir .Name) -}}
+  {{- $imageurl := printf "%s/%s" $dir .Name -}}
+  {{- $imagetitle := index (split .Name ".") 0 -}}
+    <li>
+        <img src="{{ $imageurl }}" alt="{{ $imagetitle }}" title="{{ $imagetitle }}">
+      </a>
+    </li>  
+{{ end }}
+</ul>

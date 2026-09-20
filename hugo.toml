@@ -1,0 +1,60 @@
+baseURL = 'https://alexkisiel.com/'
+locale = 'en-us'
+title = 'Alex Kisiel'
+theme = 'etch'
+
+pluralizeListTitles = false
+enableInlineShortcodes = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  dark = "auto"
+  highlight = true
+  enableEmoji = true
+
+[menu]
+    [[menu.main]]
+        identifier = "music"
+        name = "music"
+        title = "music"
+        url = "/music"
+        weight = 1
+        [menu.main.params]
+            active = false
+
+    [[menu.main]]
+        identifier = "drawings"
+        name = "drawings"
+        title = "drawings"
+        url = "/drawings/"
+        weight = 2
+        [menu.main.params]
+            active = true
+
+    [[menu.main]]
+        identifier = "knitting"
+        name = "knitting"
+        title = "knitting"
+        url = "/knitting/"
+        weight = 3
+        [menu.main.params]
+            active = true
+
+    [[menu.main]]
+        identifier = "reviews"
+        name = "reviews"
+        title = "reviews"
+        url = "/reviews/"
+        weight = 4
+        [menu.main.params]
+            active = false
+
+    [[menu.main]]
+        identifier = "cocktails"
+        name = "cocktails"
+        title = "cocktails"
+        url = "/cocktails/"
+        weight = 5
+        [menu.main.params]
+            active = true
