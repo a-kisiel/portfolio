@@ -26,12 +26,6 @@
     <loc>http://localhost:1313/reviews/albums/the-life-of-a-showgirl/</loc>
     <lastmod>2026-09-14T01:32:34-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/knitting/goose-giselda/</loc>
-    <lastmod>2026-09-13T17:32:10-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/knitting/</loc>
-    <lastmod>2026-09-13T17:32:10-04:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/music/cty1/</loc>
     <lastmod>2026-09-13T14:42:03-04:00</lastmod>
   </url><url>
@@ -48,6 +42,9 @@
     <lastmod>2026-09-13T13:25:48-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/knitting/fishermans-raglan/</loc>
+    <lastmod>2026-07-16T18:05:51-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/knitting/</loc>
     <lastmod>2026-07-16T18:05:51-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/knitting/handsome-chris/</loc>
@@ -68,6 +65,8 @@
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/drawings/</loc>
+  </url><url>
+    <loc>http://localhost:1313/knitting/goose-giselda/</loc>
   </url><url>
     <loc>http://localhost:1313/drawings/miscellaneous/</loc>
   </url><url>
