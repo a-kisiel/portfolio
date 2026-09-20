@@ -54,3 +54,7 @@ enableEmoji = true
         weight = 5
         [menu.main.params]
             active = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
